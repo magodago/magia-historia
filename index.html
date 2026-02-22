@@ -2,54 +2,63 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Historia de la Magia · Un mago cada día</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { background: #0a0612; -webkit-text-size-adjust: 100%; }
     body {
       font-family: 'Source Serif 4', Georgia, serif;
-      background: linear-gradient(180deg, #0a0612 0%%, #15102a 50%%, #0a0612 100%%);
+      background: #0a0612;
       color: #e8e4ef;
       min-height: 100vh;
-      padding: 2rem 1.5rem;
+      padding: 1rem 1rem 2rem;
+      overflow-x: hidden;
     }
+    @media (min-width: 600px) { body { padding: 2rem 1.5rem; } }
     .wrap { max-width: 1000px; margin: 0 auto; }
     h1 {
       font-family: 'Cinzel', serif;
-      font-size: clamp(2rem, 5vw, 3rem);
+      font-size: clamp(1.75rem, 5vw, 3rem);
       text-align: center;
       margin-bottom: 0.5rem;
-      background: linear-gradient(135deg, #e8e4ef, #c9b8e8);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: #e8e4ef;
     }
     .sub {
       text-align: center;
-      opacity: 0.85;
-      margin-bottom: 2.5rem;
-      font-size: 1.05rem;
+      color: #c9b8e8;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
     }
+    @media (min-width: 600px) { .grid { gap: 1.5rem; } }
     .card {
-      background: rgba(61,42,92,0.25);
+      background: rgba(61,42,92,0.4);
       border-radius: 16px;
-      padding: 1.5rem;
-      border: 1px solid rgba(201,184,232,0.15);
-      transition: border-color 0.2s, transform 0.2s;
+      padding: 1rem;
+      border: 1px solid rgba(201,184,232,0.2);
+      transition: border-color 0.2s;
     }
-    .card:hover { border-color: rgba(201,184,232,0.4); transform: translateY(-2px); }
+    .card:hover { border-color: rgba(201,184,232,0.5); }
     .card a { text-decoration: none; color: inherit; display: block; }
-    .card h3 { font-family: 'Cinzel', serif; font-size: 1.2rem; margin-bottom: 0.35rem; color: #c9b8e8; }
-    .card .pais { font-size: 0.9rem; opacity: 0.8; margin-bottom: 0.5rem; }
-    .card .resumen { font-size: 0.95rem; line-height: 1.5; opacity: 0.9; }
-    footer { text-align: center; margin-top: 3rem; font-size: 0.9rem; opacity: 0.6; }
+    .card-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 0.75rem;
+      background: rgba(0,0,0,0.2);
+    }
+    .card h3 { font-family: 'Cinzel', serif; font-size: 1.1rem; margin-bottom: 0.25rem; color: #e8e4ef; }
+    .card .pais { font-size: 0.85rem; color: #b8a5d8; margin-bottom: 0.35rem; }
+    .card .resumen { font-size: 0.9rem; line-height: 1.45; color: #e0d8f0; }
+    footer { text-align: center; margin-top: 2rem; font-size: 0.85rem; color: #a098b8; }
   </style>
 </head>
 <body>
@@ -60,6 +69,7 @@
 
     <article class="card">
       <a href="mago_001.html">
+        
         <h3>Harry Houdini</h3>
         <p class="pais">Hungría / Estados Unidos</p>
         <p class="resumen">El escapista más famoso de la historia. Revolucionó el ilusionismo con sus fugas imposibles y su capacidad para converti…</p>
@@ -68,6 +78,7 @@
 
     <article class="card">
       <a href="mago_002.html">
+        
         <h3>Juan Tamariz</h3>
         <p class="pais">España</p>
         <p class="resumen">Referente mundial de la magia de cerca y la cartomagia. Creador del método Mnemonics y divulgador de la magia en televis…</p>
@@ -76,6 +87,7 @@
 
     <article class="card">
       <a href="mago_003.html">
+        
         <h3>David Copperfield</h3>
         <p class="pais">Estados Unidos</p>
         <p class="resumen">Ilusionista de grandes ilusiones y uno de los magos más taquilleros de la historia. Famoso por hacer «desaparecer» la Es…</p>
@@ -84,13 +96,23 @@
 
     <article class="card">
       <a href="mago_004.html">
+        
         <h3>Dai Vernon</h3>
         <p class="pais">Canadá</p>
         <p class="resumen">«El hombre que engañó a Houdini». Maestro de la magia de cerca y la cartomagia; influyó en generaciones de magos en Esta…</p>
       </a>
     </article>
+
+    <article class="card">
+      <a href="mago_005.html">
+        
+        <h3>Penn & Teller</h3>
+        <p class="pais">Estados Unidos</p>
+        <p class="resumen">Dúo que combina magia, humor negro y desenmascaramiento. Actúan en Las Vegas y en televisión; a veces revelan el truco y…</p>
+      </a>
+    </article>
     </div>
-    <footer>4 magos · Creado con NEO · Sube con GITHUB:push y comparte la URL</footer>
+    <footer>5 magos · Creado con NEO</footer>
   </div>
 </body>
 </html>
