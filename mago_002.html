@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Juan Tamariz · Historia de la Magia</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -11,28 +11,32 @@
     h1 { font-family: 'Cinzel', serif; }
     
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { background: #0a0612; -webkit-text-size-adjust: 100%; }
     body {
       font-family: 'Segoe UI', 'Georgia', system-ui, serif;
       background: #0a0612;
       color: #e8e4ef;
       min-height: 100vh;
       line-height: 1.7;
+      font-size: 1rem;
+      overflow-x: hidden;
     }
-    .wrap { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
-    .back { display: inline-block; margin-bottom: 2rem; padding: 0.5rem 1rem; background: linear-gradient(135deg, #3d2a5c, #2a1a45); border-radius: 8px; color: #c9b8e8; text-decoration: none; border: 1px solid rgba(201,184,232,0.3); }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 1rem 1rem 2rem; }
+    @media (min-width: 600px) { .wrap { padding: 2rem 1.5rem; } }
+    .back { display: inline-block; margin-bottom: 1rem; padding: 0.5rem 1rem; background: linear-gradient(135deg, #3d2a5c, #2a1a45); border-radius: 8px; color: #c9b8e8; text-decoration: none; border: 1px solid rgba(201,184,232,0.3); font-size: 0.95rem; }
     .back:hover { background: #4a3570; }
-    h1 { font-size: clamp(1.8rem, 5vw, 2.5rem); margin-bottom: 0.25rem; background: linear-gradient(135deg, #e8e4ef, #c9b8e8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .meta { font-size: 0.95rem; opacity: 0.9; margin-bottom: 1.5rem; }
-    .meta span { margin-right: 1rem; }
-    .foto { width: 100%%; max-width: 400px; border-radius: 16px; margin: 1.5rem 0; box-shadow: 0 20px 50px rgba(0,0,0,0.5); border: 2px solid rgba(201,184,232,0.2); }
-    .bio { margin: 1.5rem 0; padding: 1.25rem; background: rgba(61,42,92,0.3); border-radius: 12px; border-left: 4px solid #8b7ab8; }
-    .bio p { margin-bottom: 0.75rem; }
+    h1 { font-size: clamp(1.5rem, 5vw, 2.5rem); margin-bottom: 0.25rem; color: #e8e4ef; }
+    .meta { font-size: 0.95rem; color: #c9b8e8; margin-bottom: 1rem; }
+    .meta span { margin-right: 0.5rem; }
+    .foto { width: 100%; max-width: 100%; height: auto; border-radius: 12px; margin: 1rem 0; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 2px solid rgba(201,184,232,0.2); display: block; }
+    .bio { margin: 1rem 0; padding: 1rem; background: rgba(61,42,92,0.35); border-radius: 12px; border-left: 4px solid #8b7ab8; color: #e8e4ef; }
+    .bio p { margin-bottom: 0.75rem; color: #e8e4ef; }
     .bio p:last-child { margin-bottom: 0; }
-    h2 { font-size: 1.2rem; margin: 2rem 0 0.75rem; color: #b8a5d8; }
-    ul { padding-left: 1.5rem; margin: 0.5rem 0 1rem; }
+    h2 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; color: #b8a5d8; }
+    ul { padding-left: 1.25rem; margin: 0.5rem 0 1rem; color: #e8e4ef; }
     li { margin: 0.35rem 0; }
-    .curiosidades { font-style: italic; opacity: 0.95; }
-    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.9rem; opacity: 0.7; }
+    .curiosidades { font-style: italic; color: #e0d8f0; }
+    footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.9rem; color: #a098b8; }
 
   </style>
 </head>
@@ -41,7 +45,7 @@
     <nav><a class="back" href="mago_001.html">← Mago anterior</a> <a class="back" href="index.html">← Índice</a> <a class="back" href="mago_003.html">Siguiente →</a></nav>
     <h1>Juan Tamariz</h1>
     <p class="meta"><span>España · Madrid · 1942</span></p>
-    <img class="foto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Juan_Tamariz_2012.jpg/400px-Juan_Tamariz_2012.jpg" alt="Juan Tamariz" loading="lazy" onerror="this.src='https://placehold.co/400x500/1a1525/c9b8e8?text=Magia'">
+    <img class="foto" src="https://placehold.co/400x500/1a1525/c9b8e8?text=Magia" alt="Juan Tamariz" loading="lazy" onerror="this.src='https://placehold.co/400x500/1a1525/c9b8e8?text=Magia'">
     <div class="bio">
       <p>Juan Tamariz Martel nació en Madrid. Estudió Física y luego se dedicó por completo a la magia. Ganó el Premio Mundial de Cartomagia (FISM) en 1973 con su rutina del «número 8». Es autor de libros fundamentales como «Los 5 puntos mágicos», «Sobre el juego de cartas» y «Mnemonics», un sistema de memorización para barajas ordenadas que revolucionó la magia de salón. En TVE presentó programas como «El gran juego de la oca» y «Magia potagia», acercando la magia a varias generaciones. Fundó la Escuela de Magia Ana Tamariz. Sigue actuando y enseñando.</p>
     </div>
