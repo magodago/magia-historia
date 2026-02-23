@@ -24,13 +24,21 @@
       font-size: 1rem;
       overflow-x: hidden;
     }
-    .wrap { max-width: 900px; margin: 0 auto; padding: 1rem 1rem 2rem; }
+    .magic-light { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+    .magic-light::before {
+      content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+      background: linear-gradient(105deg, transparent 35%, rgba(200,180,255,0.06) 48%, rgba(255,250,280,0.12) 50%, rgba(200,180,255,0.06) 52%, transparent 65%);
+      animation: magicBeam 6s ease-in-out infinite;
+    }
+    @keyframes magicBeam { 0% { transform: translateX(-25%) translateY(-25%); } 100% { transform: translateX(25%) translateY(25%); } }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 1rem 1rem 2rem; position: relative; z-index: 1; }
     @media (min-width: 600px) { .wrap { padding: 2rem 1.5rem; } }
     .back { display: inline-block; margin-bottom: 1rem; margin-right: 0.5rem; padding: 0.5rem 1rem; background: linear-gradient(135deg, #3d2a5c, #2a1a45); border-radius: 8px; color: #c9b8e8; text-decoration: none; border: 1px solid rgba(201,184,232,0.3); font-size: 0.95rem; transition: box-shadow 0.3s, transform 0.2s; }
     .back:hover { background: #4a3570; box-shadow: 0 0 20px rgba(201,184,232,0.3); }
     h1 { font-family: 'Cinzel', serif; font-size: clamp(1.5rem, 5vw, 2.5rem); margin-bottom: 0.25rem; color: #e8e4ef; text-shadow: 0 0 30px rgba(201,184,232,0.2); }
     .meta { font-size: 0.95rem; color: #c9b8e8; margin-bottom: 1rem; }
     .meta span { margin-right: 0.5rem; }
+    .tag-especialidad { display: inline-block; font-size: 0.8rem; background: rgba(80,50,120,0.5); color: #c9b8e8; padding: 0.2rem 0.5rem; border-radius: 12px; margin-left: 0.5rem; border: 1px solid rgba(201,184,232,0.2); }
     .foto-wrap { position: relative; margin: 1rem 0; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.5), 0 0 40px rgba(180,120,255,0.15); border: 2px solid rgba(201,184,232,0.25); }
     .foto-wrap::before { content: ''; position: absolute; inset: 0; border-radius: 14px; padding: 2px; background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent 40%, transparent 60%, rgba(255,255,255,0.08)); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; }
     .foto { width: 100%; max-width: 100%; height: auto; max-height: 70vh; object-fit: contain; object-position: center top; display: block; vertical-align: top; }
@@ -52,10 +60,11 @@
   </style>
 </head>
 <body>
+  <div class="magic-light" aria-hidden="true"></div>
   <div class="wrap">
     <nav><a class="back" href="mago_001.html">← Anterior</a> <a class="back" href="index.html">← Índice</a> <a class="back" href="mago_003.html">Siguiente →</a></nav>
     <h1>Juan Tamariz</h1>
-    <p class="meta"><span>España · Madrid · 1942</span></p>
+    <p class="meta"><span>España · Madrid · 1942</span><span class="tag-especialidad">Cartomagia</span></p>
     <div class="foto-wrap">
       <img class="foto" src="https://upload.wikimedia.org/wikipedia/commons/3/39/Juan_Tamariz_durante_su_actuaci%C3%B3n_en_Puerto_del_Rosario_%28cropped%29.jpg" alt="Juan Tamariz" loading="lazy" onerror="this.src='https://placehold.co/400x500/1a1525/c9b8e8?text=Juan%2BTamariz'">
     </div>
@@ -64,7 +73,7 @@
       <p>Juan Tamariz Martel nació en Madrid. Estudió Física y luego se dedicó por completo a la magia. Ganó el Premio Mundial de Cartomagia (FISM) en 1973 con su rutina del «número 8». Es autor de libros fundamentales como «Los 5 puntos mágicos», «Sobre el juego de cartas» y «Mnemonics», un sistema de memorización para barajas ordenadas que revolucionó la magia de salón. En TVE presentó programas como «El gran juego de la oca» y «Magia potagia», acercando la magia a varias generaciones. Fundó la Escuela de Magia Ana Tamariz. Sigue actuando y enseñando.</p>
     </div>
     <div class="legado"><strong>Legado:</strong> Referente mundial de la cartomagia y la magia de cerca. Sus libros y su método Mnemonics son pilares de la magia contemporánea.</div>
-    <div class="datos-clave"><span>Método Mnemonics para cartomagia</span><span>Los 5 puntos mágicos (teoría)</span><span>Ganó el FISM con una baraja prestada.</span></div>
+    <div class="datos-clave"><span>Método Mnemonics para cartomagia</span><span>Los 5 puntos mágicos (teoría)</span><span>Magia en televisión en España</span><span>Ganó el FISM con una baraja prestada.</span><span>Es también compositor y ha escrito música para magia.</span></div>
     <h2>Aportaciones a la magia</h2>
     <ul><li>Método Mnemonics para cartomagia</li><li>Los 5 puntos mágicos (teoría)</li><li>Magia en televisión en España</li><li>Escuela y divulgación</li></ul>
     <h2>Curiosidades</h2>

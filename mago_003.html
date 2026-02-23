@@ -24,13 +24,21 @@
       font-size: 1rem;
       overflow-x: hidden;
     }
-    .wrap { max-width: 900px; margin: 0 auto; padding: 1rem 1rem 2rem; }
+    .magic-light { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+    .magic-light::before {
+      content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+      background: linear-gradient(105deg, transparent 35%, rgba(200,180,255,0.06) 48%, rgba(255,250,280,0.12) 50%, rgba(200,180,255,0.06) 52%, transparent 65%);
+      animation: magicBeam 6s ease-in-out infinite;
+    }
+    @keyframes magicBeam { 0% { transform: translateX(-25%) translateY(-25%); } 100% { transform: translateX(25%) translateY(25%); } }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 1rem 1rem 2rem; position: relative; z-index: 1; }
     @media (min-width: 600px) { .wrap { padding: 2rem 1.5rem; } }
     .back { display: inline-block; margin-bottom: 1rem; margin-right: 0.5rem; padding: 0.5rem 1rem; background: linear-gradient(135deg, #3d2a5c, #2a1a45); border-radius: 8px; color: #c9b8e8; text-decoration: none; border: 1px solid rgba(201,184,232,0.3); font-size: 0.95rem; transition: box-shadow 0.3s, transform 0.2s; }
     .back:hover { background: #4a3570; box-shadow: 0 0 20px rgba(201,184,232,0.3); }
     h1 { font-family: 'Cinzel', serif; font-size: clamp(1.5rem, 5vw, 2.5rem); margin-bottom: 0.25rem; color: #e8e4ef; text-shadow: 0 0 30px rgba(201,184,232,0.2); }
     .meta { font-size: 0.95rem; color: #c9b8e8; margin-bottom: 1rem; }
     .meta span { margin-right: 0.5rem; }
+    .tag-especialidad { display: inline-block; font-size: 0.8rem; background: rgba(80,50,120,0.5); color: #c9b8e8; padding: 0.2rem 0.5rem; border-radius: 12px; margin-left: 0.5rem; border: 1px solid rgba(201,184,232,0.2); }
     .foto-wrap { position: relative; margin: 1rem 0; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.5), 0 0 40px rgba(180,120,255,0.15); border: 2px solid rgba(201,184,232,0.25); }
     .foto-wrap::before { content: ''; position: absolute; inset: 0; border-radius: 14px; padding: 2px; background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent 40%, transparent 60%, rgba(255,255,255,0.08)); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; }
     .foto { width: 100%; max-width: 100%; height: auto; max-height: 70vh; object-fit: contain; object-position: center top; display: block; vertical-align: top; }
@@ -52,10 +60,11 @@
   </style>
 </head>
 <body>
+  <div class="magic-light" aria-hidden="true"></div>
   <div class="wrap">
     <nav><a class="back" href="mago_002.html">← Anterior</a> <a class="back" href="index.html">← Índice</a> <a class="back" href="mago_004.html">Siguiente →</a></nav>
     <h1>David Copperfield</h1>
-    <p class="meta"><span>Estados Unidos · Metuchen, Nueva Jersey · 1956</span></p>
+    <p class="meta"><span>Estados Unidos · Metuchen, Nueva Jersey · 1956</span><span class="tag-especialidad">Grandes ilusiones</span></p>
     <div class="foto-wrap">
       <img class="foto" src="https://upload.wikimedia.org/wikipedia/commons/5/50/Copperfield_cover_serial.jpg" alt="David Copperfield" loading="lazy" onerror="this.src='https://placehold.co/400x500/1a1525/c9b8e8?text=David%2BCopperfield'">
     </div>
@@ -64,7 +73,7 @@
       <p>David Seth Kotkin nació en Nueva Jersey. Empezó con 12 años en la magia y a los 16 ya enseñaba en la universidad. Adoptó el nombre artístico por la novela de Dickens. Sus especiales de televisión (CBS) batieron récords de audiencia durante décadas. Entre sus ilusiones más recordadas: desaparición de la Estatua de la Libertad, vuelo aparente sobre el escenario, atravesar la Gran Muralla China, escape de la cámara de tortura con agua, desaparición de un avión. Creó el proyecto «Project Magic» para rehabilitación en hospitales usando magia. Tiene un museo de magia en Las Vegas.</p>
     </div>
     <div class="legado"><strong>Legado:</strong> El ilusionista más taquillero de la historia. Llevó las grandes ilusiones a la televisión y creó Project Magic para rehabilitación con magia.</div>
-    <div class="datos-clave"><span>Grandes ilusiones televisadas a escala mundial</span><span>Project Magic (magia terapéutica)</span><span>Tiene una isla privada en las Bahamas (Musha Cay).</span></div>
+    <div class="datos-clave"><span>Grandes ilusiones televisadas a escala mundial</span><span>Project Magic (magia terapéutica)</span><span>Museo de magia en Las Vegas</span><span>Tiene una isla privada en las Bahamas (Musha Cay).</span><span>Fue pareja de Claudia Schiffer.</span></div>
     <h2>Aportaciones a la magia</h2>
     <ul><li>Grandes ilusiones televisadas a escala mundial</li><li>Project Magic (magia terapéutica)</li><li>Museo de magia en Las Vegas</li><li>Reinvención del ilusionismo de escenario</li></ul>
     <h2>Curiosidades</h2>

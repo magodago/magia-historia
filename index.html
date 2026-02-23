@@ -31,6 +31,13 @@
     .magic-bg span:nth-child(5) { left: 40%; top: 80%; animation-delay: 0.4s; }
     .magic-bg span:nth-child(6) { left: 70%; top: 35%; animation-delay: 1.2s; }
     @keyframes sparkle { 0%, 100% { opacity: 0.3; transform: scale(0.8); } 50% { opacity: 0.9; transform: scale(1.2); } }
+    .magic-light { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+    .magic-light::before {
+      content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+      background: linear-gradient(105deg, transparent 35%, rgba(200,180,255,0.07) 48%, rgba(255,250,280,0.14) 50%, rgba(200,180,255,0.07) 52%, transparent 65%);
+      animation: magicBeam 6s ease-in-out infinite;
+    }
+    @keyframes magicBeam { 0% { transform: translateX(-25%) translateY(-25%); } 100% { transform: translateX(25%) translateY(25%); } }
     .wrap > * { position: relative; z-index: 1; }
     h1 {
       font-family: 'Cinzel', serif;
@@ -103,6 +110,7 @@
 </head>
 <body>
   <div class="magic-bg"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="magic-light" aria-hidden="true"></div>
   <div class="wrap">
     <h1>✨ Historia de la Magia ✨</h1>
     <p class="sub">Un mago cada día · Biografías, fotos y datos de magos de todo el mundo</p>
